@@ -1,6 +1,9 @@
 import { useState } from 'react'
-import {Tweet} from './components/Tweet'
+import { Tweet } from './components/Tweet'
 import './App.css'
+// import {AppRoutes} from './AppRoutes'
+import { Outlet, Link } from "react-router-dom";
+
 
 function App() {
   const [inputText, setText] = useState("Olá, Edu!")
@@ -15,10 +18,10 @@ function App() {
     setText("")
   }
   return (
-    <div className="App">
+    <div>
       {/* <h1>Olá Mundo!</h1>*/}
       {/* <p>02/07/2022 22:41</p> */}
-      { tweets.map(txt =><Tweet text={txt}/>) }
+      { tweets.map(txt =><Tweet key={txt} text={txt}/>) }
       <input
         type="text"
         value={inputText}
@@ -30,6 +33,18 @@ function App() {
       >
         Adicionar novo Tweet
       </button>
+
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+        <Link to="/">Main</Link> |{" "}
+        <Link to="/Catalogo">Catalogo</Link> |{" "}
+        <Link to="/Carrinho">Carrinho</Link>
+      </nav>
+      <Outlet/>
     </div>
   )
 }

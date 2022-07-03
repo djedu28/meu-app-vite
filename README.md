@@ -20,6 +20,15 @@ yarn
 
 ## ...
 
+## Instalar React Router DOM
+yarn add react-router-dom@6
+
+Mais info no link: https://reactrouter.com/docs/en/v6/getting-started/tutorial
+
+## ...
+
+===================================
+
 # Rever, Estudar e Usar (34:00 - O que estudar a mais sobre React?)
 
 ## 34:12 - CSS in JS [ CSS/Estilização no React ]
